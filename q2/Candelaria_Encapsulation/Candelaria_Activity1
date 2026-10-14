@@ -1,0 +1,24 @@
+class GameCharacter:
+    def __init__(self, username):
+        self.username = username
+# Since it "can be displayed and accessed by anyone." it should be public (.)(+)
+
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance
+# If it cant be accessed directly outside the class, it should be private (.__)(-)
+
+class Vehicle:
+    def __init__(self, engineCode):
+        self._engineCode = engineCode
+# The vehicle class should only be accessed within the class and its subclasses. So it must be protected (._)(#)
+
+class Student:
+    def __init__(self, schoolName):
+        self.schoolName = schoolName
+# This is designed to be safe for everyone to view and modify. Hence it is public (.)(+)
+
+class VotingSystem:
+    def __init__(self, voterID):
+        self.__voterID = voterID
+# If it has to be hidden for security reasons it should be private (.__)(-)
